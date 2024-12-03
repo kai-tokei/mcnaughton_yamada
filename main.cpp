@@ -65,6 +65,8 @@ int main(int argc, char *argv[])
                 {
                     for (int k = 0; k < vec.size(); k++)
                     {
+                        regular[k][i][j] +=
+                            regular[k - 1][i][j] + regular[k - 1][i][k] + "(" + regular[k - 1][k][k] + ")*" + regular[k - 1][k][j];
                     }
                 }
             }
